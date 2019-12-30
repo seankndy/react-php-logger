@@ -67,6 +67,6 @@ final class Logger extends AbstractLogger
         $message = '[' . \date('Y-m-d h:m:s') . '] ' . $this->name . '.' .
             \strtoupper($level) . ': ' . (string)$message;
         $message = processPlaceHolders($message, $context);
-        $this->stream->write($message);
+        $this->stream->write($message.\PHP_EOL);
     }
 }
