@@ -64,7 +64,7 @@ final class Logger extends AbstractLogger
         if (!isset(self::LOG_LEVELS[$level]) || $this->minLevel > self::LOG_LEVELS[$level]) {
             return;
         }
-        $message = '[' . \date('Y-m-d h:m:s') . '] ' . $this->name . '.' .
+        $message = '[' . \date('Y-m-d H:i:s') . '] ' . $this->name . '.' .
             \strtoupper($level) . ': ' . (string)$message;
         $message = processPlaceHolders($message, $context);
         $this->stream->write($message.\PHP_EOL);
