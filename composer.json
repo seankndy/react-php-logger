@@ -13,7 +13,7 @@
         "psr-3"
     ],
     "require": {
-        "php": "^7.2",
+        "php": ">=7.2",
         "psr/log": "^1.0",
         "react/event-loop": "^1.1",
         "react/stream": "^1.1",
