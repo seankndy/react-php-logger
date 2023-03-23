@@ -2,7 +2,6 @@
 namespace SeanKndy\ReactLogger;
 
 use React\Stream\WritableStreamInterface;
-use React\EventLoop\LoopInterface;
 use Psr\Log\AbstractLogger;
 use Psr\Log\LogLevel;
 use function WyriHaximus\PSR3\processPlaceHolders;
@@ -59,7 +58,7 @@ final class Logger extends AbstractLogger
     /**
      * {@inheritDoc}
      */
-    public function log($level, $message, array $context = []): void
+    public function log($level, string|\Stringable $message, array $context = []): void
     {
         if (!isset(self::LOG_LEVELS[$level]) || $this->minLevel > self::LOG_LEVELS[$level]) {
             return;
