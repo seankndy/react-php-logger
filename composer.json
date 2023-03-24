@@ -13,11 +13,11 @@
         "psr-3"
     ],
     "require": {
-        "php": ">=8.0",
-        "psr/log": "^3 || ^2",
+        "php": ">=7.2",
+        "psr/log": "^1.0",
         "react/event-loop": "^1.1",
         "react/stream": "^1.1",
-        "wyrihaximus/psr-3-utilities": "^2.1.0"
+        "wyrihaximus/psr-3-utilities": "^1.1"
     },
     "autoload": {
         "psr-4": {
